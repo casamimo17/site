@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CasaMimo | Achadinhos da Shopee ✨</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            mimo: {
+              terracotta: '#D97A53',
+              terracottaDark: '#B85E38',
+              cream: '#FAF4ED',
+              creamDark: '#F2E5D5',
+              sage: '#7A8B7B',
+              sageLight: '#E8EFE8',
+              mustard: '#D2A24C',
+              brown: '#4A3B32',
+              brownLight: '#705B4E',
+              cardBg: '#FFFFFF',
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #FAF4ED;
+      color: #4A3B32;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #F2E5D5;
+      border-radius: 10px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #D97A53;
+      border-radius: 10px;
+    }
+    .badge-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col font-sans antialiased selection:bg-mimo-terracotta selection:text-white">
+
+  <!-- Header Banner / VIP Notification Bar -->
+  <div class="bg-mimo-terracotta text-white py-2 px-3 sm:py-2.5 sm:px-4 text-center text-xs sm:text-sm font-medium shadow-sm flex items-center justify-center gap-1.5 sm:gap-2">
+    <span class="inline-flex items-center gap-1 bg-white/20 px-2 py-0.5 rounded-full text-[10px] sm:text-[11px] font-bold uppercase tracking-wider shrink-0">VIP</span>
+    <span class="truncate">Grupo VIP de ofertas no WhatsApp!</span>
+    <a href="https://chat.whatsapp.com" target="_blank" rel="noopener noreferrer" class="underline font-bold hover:text-mimo-cream transition-colors ml-1 shrink-0">Entrar →</a>
+  </div>
+
+  <main class="flex-grow max-w-6xl mx-auto w-full px-3 sm:px-6 py-6 sm:py-10 flex flex-col items-center">
+
+    <!-- Profile & Branding Section -->
+    <header class="flex flex-col items-center text-center mb-6 sm:mb-8 w-full">
+      
+      <!-- Custom Animated Logo Container -->
+      <div class="relative group cursor-pointer mb-3 sm:mb-4">
+        <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-2xl sm:rounded-3xl bg-white p-2.5 sm:p-3 shadow-md border-2 border-mimo-creamDark flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+          <!-- Logo SVG reproduction -->
+          <svg viewBox="0 0 200 220" class="w-full h-full text-mimo-brown" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Roof / House Top -->
+            <path d="M 20 80 L 100 20 L 180 80" stroke="#D97A53" stroke-width="10" fill="none" />
+            <rect x="145" y="32" width="16" height="24" fill="#D97A53" stroke="#D97A53" />
+            
+            <!-- Stack of Books -->
+            <rect x="40" y="82" width="120" height="22" rx="4" fill="#D2A24C" stroke="#4A3B32" stroke-width="4" />
+            <line x1="55" y1="93" x2="140" y2="93" stroke="#4A3B32" stroke-width="3" opacity="0.6" />
+            
+            <rect x="35" y="106" width="130" height="24" rx="4" fill="#D97A53" stroke="#4A3B32" stroke-width="4" />
+            <line x1="50" y1="118" x2="145" y2="118" stroke="#FFFFFF" stroke-width="3" opacity="0.8" />
+            
+            <rect x="42" y="132" width="116" height="22" rx="4" fill="#F2E5D5" stroke="#4A3B32" stroke-width="4" />
+            
+            <!-- Dice on left -->
+            <rect x="25" y="156" width="40" height="36" rx="6" fill="#D2A24C" stroke="#4A3B32" stroke-width="4" />
+            <circle cx="37" cy="167" r="2.5" fill="#4A3B32" />
+            <circle cx="53" cy="167" r="2.5" fill="#4A3B32" />
+            <circle cx="37" cy="181" r="2.5" fill="#4A3B32" />
+            <circle cx="53" cy="181" r="2.5" fill="#4A3B32" />
+            
+            <!-- Shelf / Lower Box -->
+            <rect x="70" y="156" width="85" height="36" rx="4" fill="#7A8B7B" stroke="#4A3B32" stroke-width="4" />
+            <line x1="82" y1="174" x2="142" y2="174" stroke="#FFFFFF" stroke-width="3" opacity="0.7" />
+            
+            <!-- Pencil on right -->
+            <path d="M 162 120 L 176 120 L 176 182 L 169 194 L 162 182 Z" fill="#7A8B7B" stroke="#4A3B32" stroke-width="4" />
+            <path d="M 162 182 L 169 194 L 176 182" fill="#D97A53" stroke="#4A3B32" stroke-width="2" />
+          </svg>
+        </div>
+        <span class="absolute -bottom-1 -right-1 bg-mimo-terracotta text-white rounded-full p-1.5 shadow-md">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+        </span>
+      </div>
+
+      <!-- Title & Subtitle -->
+      <h1 class="text-2xl sm:text-4xl font-extrabold font-serif tracking-tight text-mimo-brown mb-1">
+        CasaMimo
+      </h1>
+      <p class="text-mimo-brownLight text-xs sm:text-base max-w-md font-medium mb-4 px-2">
+        Achadinhos fofos, práticos e úteis para transformar sua casa ✨
+      </p>
+
+      <!-- Social Media & Contact Links Bar (Responsive Wrap & Touch Targets) -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-5 w-full max-w-lg px-2">
+        <a href="https://instagram.com" target="_blank" class="flex-1 sm:flex-none min-h-[40px] inline-flex items-center justify-center gap-2 bg-white hover:bg-mimo-creamDark text-mimo-brown px-3 py-2 rounded-xl text-xs font-semibold shadow-sm border border-mimo-creamDark transition-all active:scale-95">
+          <i data-lucide="instagram" class="w-4 h-4 text-mimo-terracotta"></i>
+          Instagram
+        </a>
+        <a href="https://tiktok.com" target="_blank" class="flex-1 sm:flex-none min-h-[40px] inline-flex items-center justify-center gap-2 bg-white hover:bg-mimo-creamDark text-mimo-brown px-3 py-2 rounded-xl text-xs font-semibold shadow-sm border border-mimo-creamDark transition-all active:scale-95">
+          <i data-lucide="video" class="w-4 h-4 text-mimo-brown"></i>
+          TikTok
+        </a>
+        <a href="https://chat.whatsapp.com" target="_blank" class="w-full sm:w-auto min-h-[40px] inline-flex items-center justify-center gap-2 bg-mimo-sage text-white px-4 py-2 rounded-xl text-xs font-bold shadow-sm hover:bg-opacity-90 transition-all active:scale-95">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          Grupo VIP WhatsApp
+        </a>
+      </div>
+
+      <!-- Responsive Search Bar -->
+      <div class="w-full max-w-lg relative mb-4">
+        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-mimo-brownLight">
+          <i data-lucide="search" class="w-4 h-4"></i>
+        </div>
+        <input 
+          type="text" 
+          id="searchInput"
+          placeholder="Busque por produto ou código (ex: #01, fone, vela)..." 
+          class="w-full pl-10 pr-10 py-3 bg-white border-2 border-mimo-creamDark rounded-2xl text-xs sm:text-sm text-mimo-brown placeholder-mimo-brownLight/60 focus:outline-none focus:border-mimo-terracotta focus:ring-2 focus:ring-mimo-terracotta/20 shadow-sm transition-all"
+        >
+        <button id="clearSearch" class="hidden absolute inset-y-0 right-0 pr-3 flex items-center text-mimo-brownLight hover:text-mimo-terracotta">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <!-- Responsive Scrollable Filter Categories -->
+      <div class="w-full flex items-center gap-2 overflow-x-auto py-1 px-1 custom-scrollbar justify-start sm:justify-center">
+        <button data-category="todos" class="category-btn active min-h-[38px] px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all bg-mimo-terracotta text-white shadow-sm shrink-0">
+          ✨ Todos
+        </button>
+        <button data-category="livros" class="category-btn min-h-[38px] px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all bg-white text-mimo-brown hover:bg-mimo-creamDark border border-mimo-creamDark shrink-0">
+          📚 Livros
+        </button>
+        <button data-category="jogos" class="category-btn min-h-[38px] px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all bg-white text-mimo-brown hover:bg-mimo-creamDark border border-mimo-creamDark shrink-0">
+          🎲 Jogos & Lazer
+        </button>
+        <button data-category="decoracao" class="category-btn min-h-[38px] px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all bg-white text-mimo-brown hover:bg-mimo-creamDark border border-mimo-creamDark shrink-0">
+          🖼️ Decoração
+        </button>
+        <button data-category="organizacao" class="category-btn min-h-[38px] px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all bg-white text-mimo-brown hover:bg-mimo-creamDark border border-mimo-creamDark shrink-0">
+          📦 Organização
+        </button>
+        <button data-category="papelaria" class="category-btn min-h-[38px] px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all bg-white text-mimo-brown hover:bg-mimo-creamDark border border-mimo-creamDark shrink-0">
+          ✏️ Papelaria
+        </button>
+      </div>
+
+    </header>
+
+    <!-- Product Counter & Filter Summary -->
+    <div class="w-full flex justify-between items-center mb-4 px-1 text-xs text-mimo-brownLight font-semibold">
+      <span id="productCounter">Mostrando 8 achadinhos</span>
+      <span class="text-mimo-terracotta hidden sm:flex items-center gap-1">
+        <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i> Links verificados hoje
+      </span>
+    </div>
+
+    <!-- Responsive Grid Layout: 1 col (mobile), 2 col (tablet), 3 col (desktop) -->
+    <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 w-full">
+      <!-- Products dynamically generated by JS -->
+    </div>
+
+    <!-- Empty State -->
+    <div id="emptyState" class="hidden flex-col items-center justify-center py-12 text-center w-full">
+      <div class="w-16 h-16 bg-mimo-creamDark rounded-full flex items-center justify-center text-mimo-terracotta mb-3">
+        <i data-lucide="search-x" class="w-8 h-8"></i>
+      </div>
+      <h3 class="text-base sm:text-lg font-bold text-mimo-brown">Nenhum achadinho encontrado</h3>
+      <p class="text-xs sm:text-sm text-mimo-brownLight mt-1">Tente buscar por outro termo ou código.</p>
+      <button id="resetSearchBtn" class="mt-4 px-4 py-2.5 bg-mimo-terracotta text-white rounded-xl text-xs font-bold hover:bg-mimo-terracottaDark transition-colors">
+        Limpar busca e ver todos
+      </button>
+    </div>
+
+  </main>
+
+  <!-- Product Quick Detail Modal (Fully Responsive) -->
+  <div id="productModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 opacity-0 pointer-events-none transition-all duration-300">
+    <div class="bg-white w-full max-w-lg rounded-t-3xl sm:rounded-3xl p-5 sm:p-6 shadow-2xl transform translate-y-10 sm:translate-y-0 transition-transform duration-300 flex flex-col max-h-[90vh] overflow-y-auto">
+      <div class="flex justify-between items-start mb-3">
+        <span id="modalCode" class="bg-mimo-brown text-white text-xs font-extrabold px-2.5 py-1 rounded-lg"></span>
+        <button id="closeModal" class="text-mimo-brownLight hover:text-mimo-terracotta p-1">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <img id="modalImage" src="" alt="" class="w-full h-48 sm:h-60 object-cover rounded-2xl mb-4 bg-mimo-cream">
+      
+      <div class="flex items-center justify-between text-xs text-mimo-brownLight mb-1">
+        <span id="modalCategory" class="bg-mimo-sageLight text-mimo-sage px-2 py-0.5 rounded-md font-semibold"></span>
+        <span id="modalRating" class="text-mimo-mustard font-bold"></span>
+      </div>
+
+      <h3 id="modalTitle" class="text-base sm:text-lg font-bold text-mimo-brown mb-3"></h3>
+
+      <div class="flex items-baseline gap-2 mb-5">
+        <span id="modalOldPrice" class="text-xs text-mimo-brownLight line-through"></span>
+        <span id="modalPrice" class="text-xl sm:text-2xl font-extrabold text-mimo-terracotta"></span>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-2 mt-auto">
+        <button id="modalCopyBtn" class="flex-1 min-h-[44px] bg-mimo-creamDark hover:bg-mimo-cream text-mimo-brown font-bold rounded-xl text-xs flex items-center justify-center gap-2 border border-mimo-creamDark transition-colors">
+          <i data-lucide="copy" class="w-4 h-4"></i>
+          <span>Copiar Link</span>
+        </button>
+        <a id="modalShopeeBtn" href="" target="_blank" rel="noopener noreferrer" class="flex-1 min-h-[44px] bg-mimo-terracotta hover:bg-mimo-terracottaDark text-white font-bold rounded-xl text-xs flex items-center justify-center gap-2 transition-colors">
+          <span>Ir para a Shopee</span>
+          <i data-lucide="external-link" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 sm:left-auto sm:right-6 sm:translate-x-0 transform translate-y-20 opacity-0 bg-mimo-brown text-white px-4 py-3 rounded-2xl shadow-xl flex items-center gap-2 text-xs font-semibold transition-all duration-300 z-50">
+    <i data-lucide="check-circle" class="w-4 h-4 text-mimo-mustard"></i>
+    <span id="toastMessage">Link copiado com sucesso!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-mimo-creamDark py-6 px-4 mt-8 text-center text-xs text-mimo-brownLight">
+    <div class="max-w-4xl mx-auto flex flex-col items-center gap-2 sm:gap-3">
+      <div class="flex items-center gap-2 font-serif text-sm font-bold text-mimo-brown">
+        <span>CasaMimo</span>
+        <span class="text-mimo-terracotta">•</span>
+        <span class="font-sans font-normal text-xs text-mimo-brownLight">Achadinhos Selecionados</span>
+      </div>
+      <p class="max-w-md text-mimo-brownLight/80 leading-relaxed text-[11px] sm:text-xs">
+        Comprando através dos nossos links, você apoia o perfil sem pagar nada a mais por isso!
+      </p>
+      <p class="text-[10px] sm:text-[11px] text-mimo-brownLight/50">
+        © 2026 CasaMimo • Todos os direitos reservados.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script>
+    // ... existing products array ...
+    const products = [
+      {
+        id: "01",
+        code: "#01",
+        title: "Luminária de Mesa Retrô Dobrável Recarregável",
+        category: "decoracao",
+        categoryLabel: "Decoração",
+        price: 34.90,
+        oldPrice: 69.90,
+        badge: "🔥 Mais Vendido",
+        image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=600&q=80",
+        shopeeUrl: "https://shopee.com.br",
+        rating: "4.9",
+        reviews: "1.2k"
+      },
+      {
+        id: "02",
+        code: "#02",
+        title: "Organizador de Acrílico Giratório 360° para Maquiagem e Papelaria",
+        category: "organizacao",
+        categoryLabel: "Organização",
+        price: 28.50,
+        oldPrice: 45.00,
+        badge: "⚡ Super Oferta",
+        image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80",
+        shopeeUrl: "https://shopee.com.br",
+        rating: "4.8",
+        reviews: "850"
+      },
+      {
+        id: "03",
+        code: "#03",
+        title: "Kit Cadernos A5 Capa Dura Emborrachada + Canetas Gel Mimo",
+        category: "papelaria",
+        categoryLabel: "Papelaria",
+        price: 22.90,
+        oldPrice: 39.90,
+        badge: "✨ Fofo",
+        image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80",
+        shopeeUrl: "https://shopee.com.br",
+        rating: "5.0",
+        reviews: "2.1k"
+      },
+      {
+        id: "04",
+        code: "#04",
+        title: "Jogo de Tabuleiro Aconchegante para Encontros e Amigos",
+        category: "jogos",
+        categoryLabel: "Jogos & Lazer",
+        price: 49.90,
+        oldPrice: 89.90,
+        badge: "🎲 Diversão",
+        image: "https://images.unsplash.com/photo-1610890716171-6b1bb98ffd09?auto=format&fit=crop&w=600&q=80",
+        shopeeUrl: "https://shopee.com.br",
+        rating: "4.9",
+        reviews: "410"
+      },
+      {
+        id: "05",
+        code: "#05",
+        title: "Livro de Colorir Anti-Estresse com Ilustrações de Interiores",
+        category: "livros",
+        categoryLabel: "Livros",
+        price: 19.90,
+        oldPrice: 32.00,
+        badge: "📚 Best-Seller",
+        image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80",
+        shopeeUrl: "https://shopee.com.br",
+        rating: "4.9",
+        reviews: "3.4k"
+      },
+      {
+        id: "06",
+        code: "#06",
+        title: "Vela Perfumada Aromática em Pote de Vidro Minimalista",
+        category: "decoracao",
+        categoryLabel: "Decoração",
+        price: 25.90,
+        oldPrice: 42.00,
+        badge: "🌿 Cheirinho Bom",
+        image: "https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=600&q=80",
+        shopeeUrl: "https://shopee.com.br",
+        rating: "4.8",
+        reviews: "920"
+      },
+      {
+        id: "07",
+        code: "#07",
+        title: "Kit 4 Caixas Organizadoras Dobráveis de Tecido Algodão",
+        category: "organizacao",
+        categoryLabel: "Organização",
+        price: 39.90,
+        oldPrice: 75.00,
+        badge: "🚚 Frete Grátis",
+        image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80",
+        shopeeUrl: "https://shopee.com.br",
+        rating: "4.7",
+        reviews: "1.5k"
+      },
+      {
+        id: "08",
+        code: "#08",
+        title: "Marcadores de Página Magnéticos em Tons Pastéis (Pack c/ 6)",
+        category: "papelaria",
+        categoryLabel: "Papelaria",
+        price: 12.90,
+        oldPrice: 20.00,
+        badge: "💡 Queridinho",
+        image: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=600&q=80",
+        shopeeUrl: "https://shopee.com.br",
+        rating: "5.0",
+        reviews: "680"
+      }
+    ];
+
+    let currentCategory = "todos";
+    let searchQuery = "";
+    let selectedProduct = null;
+
+    // DOM Elements
+    const productGrid = document.getElementById("productGrid");
+    const searchInput = document.getElementById("searchInput");
+    const clearSearchBtn = document.getElementById("clearSearch");
+    const emptyState = document.getElementById("emptyState");
+    const resetSearchBtn = document.getElementById("resetSearchBtn");
+    const productCounter = document.getElementById("productCounter");
+    const categoryBtns = document.querySelectorAll(".category-btn");
+    const toast = document.getElementById("toast");
+    const toastMessage = document.getElementById("toastMessage");
+
+    // Modal Elements
+    const productModal = document.getElementById("productModal");
+    const closeModal = document.getElementById("closeModal");
+    const modalCode = document.getElementById("modalCode");
+    const modalImage = document.getElementById("modalImage");
+    const modalCategory = document.getElementById("modalCategory");
+    const modalRating = document.getElementById("modalRating");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalOldPrice = document.getElementById("modalOldPrice");
+    const modalPrice = document.getElementById("modalPrice");
+    const modalCopyBtn = document.getElementById("modalCopyBtn");
+    const modalShopeeBtn = document.getElementById("modalShopeeBtn");
+
+    function formatCurrency(value) {
+      return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    }
+
+    // Render Products
+    function renderProducts() {
+      const filtered = products.filter(product => {
+        const matchesCategory = currentCategory === "todos" || product.category === currentCategory;
+        const matchesSearch = searchQuery === "" || 
+          product.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+          product.code.toLowerCase().includes(searchQuery.toLowerCase());
+        
+        return matchesCategory && matchesSearch;
+      });
+
+      productCounter.textContent = `Mostrando ${filtered.length} ${filtered.length === 1 ? 'achadinho' : 'achadinhos'}`;
+
+      if (filtered.length === 0) {
+        productGrid.innerHTML = "";
+        emptyState.classList.remove("hidden");
+        emptyState.classList.add("flex");
+        return;
+      }
+
+      emptyState.classList.add("hidden");
+      emptyState.classList.remove("flex");
+
+      productGrid.innerHTML = filtered.map(product => `
+        <div 
+          onclick="openProductModal('${product.id}')"
+          class="bg-white rounded-2xl border border-mimo-creamDark shadow-sm hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden group cursor-pointer"
+        >
+          <!-- Image & Badges -->
+          <div class="relative w-full h-44 sm:h-52 overflow-hidden bg-mimo-cream">
+            <img 
+              src="${product.image}" 
+              alt="${product.title}" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+            <div class="absolute top-2.5 left-2.5 flex flex-wrap gap-1 items-center">
+              <span class="bg-mimo-brown text-white text-[10px] sm:text-[11px] font-extrabold px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md shadow-sm">
+                ${product.code}
+              </span>
+              <span class="bg-mimo-terracotta text-white text-[10px] sm:text-[11px] font-bold px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md shadow-sm badge-pulse">
+                ${product.badge}
+              </span>
+            </div>
+            
+            <button 
+              onclick="event.stopPropagation(); copyProductLink('${product.code}', '${product.title}')"
+              title="Copiar link"
+              class="absolute top-2.5 right-2.5 bg-white/90 hover:bg-white text-mimo-brown p-2 rounded-full shadow-md transition-all hover:scale-110 active:scale-95 min-h-[36px] min-w-[36px] flex items-center justify-center"
+            >
+              <i data-lucide="share-2" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+
+          <!-- Content -->
+          <div class="p-3.5 sm:p-4 flex flex-col flex-grow justify-between">
+            <div>
+              <div class="flex items-center justify-between text-[11px] text-mimo-brownLight mb-1.5">
+                <span class="bg-mimo-sageLight text-mimo-sage px-2 py-0.5 rounded font-semibold text-[10px]">
+                  ${product.categoryLabel}
+                </span>
+                <span class="flex items-center gap-1 text-mimo-mustard font-bold">
+                  ★ ${product.rating}
+                </span>
+              </div>
+              <h3 class="font-bold text-xs sm:text-sm text-mimo-brown line-clamp-2 leading-snug group-hover:text-mimo-terracotta transition-colors">
+                ${product.title}
+              </h3>
+            </div>
+
+            <div class="mt-3 pt-2.5 border-t border-mimo-creamDark flex items-center justify-between gap-2">
+              <div>
+                <span class="text-[10px] text-mimo-brownLight line-through block leading-none">
+                  ${formatCurrency(product.oldPrice)}
+                </span>
+                <span class="text-base sm:text-lg font-extrabold text-mimo-terracotta leading-tight">
+                  ${formatCurrency(product.price)}
+                </span>
+              </div>
+
+              <a 
+                href="${product.shopeeUrl}" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                onclick="event.stopPropagation();"
+                class="min-h-[36px] inline-flex items-center gap-1 bg-mimo-terracotta hover:bg-mimo-terracottaDark text-white px-3 py-1.5 rounded-xl text-xs font-bold shadow-sm transition-all hover:scale-[1.02] active:scale-95"
+              >
+                <span>Shopee</span>
+                <i data-lucide="external-link" class="w-3 h-3"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      `).join("");
+
+      lucide.createIcons();
+    }
+
+    // Modal Handlers
+    window.openProductModal = function(id) {
+      selectedProduct = products.find(p => p.id === id);
+      if (!selectedProduct) return;
+
+      modalCode.textContent = selectedProduct.code;
+      modalImage.src = selectedProduct.image;
+      modalCategory.textContent = selectedProduct.categoryLabel;
+      modalRating.textContent = `★ ${selectedProduct.rating} (${selectedProduct.reviews} avaliações)`;
+      modalTitle.textContent = selectedProduct.title;
+      modalOldPrice.textContent = formatCurrency(selectedProduct.oldPrice);
+      modalPrice.textContent = formatCurrency(selectedProduct.price);
+      modalShopeeBtn.href = selectedProduct.shopeeUrl;
+
+      modalCopyBtn.onclick = function() {
+        copyProductLink(selectedProduct.code, selectedProduct.title);
+      };
+
+      productModal.classList.remove("opacity-0", "pointer-events-none");
+      productModal.querySelector("div").classList.remove("translate-y-10");
+    };
+
+    function hideModal() {
+      productModal.classList.add("opacity-0", "pointer-events-none");
+      productModal.querySelector("div").classList.add("translate-y-10");
+    }
+
+    closeModal.addEventListener("click", hideModal);
+    productModal.addEventListener("click", (e) => {
+      if (e.target === productModal) hideModal();
+    });
+
+    window.copyProductLink = function(code, title) {
+      const textToCopy = `Confira o achadinho ${code} (${title}) na CasaMimo!`;
+      const dummy = document.createElement("textarea");
+      document.body.appendChild(dummy);
+      dummy.value = textToCopy;
+      dummy.select();
+      document.execCommand("copy");
+      document.body.removeChild(dummy);
+
+      showToast(`Link do ${code} copiado!`);
+    };
+
+    function showToast(message) {
+      toastMessage.textContent = message;
+      toast.classList.remove("translate-y-20", "opacity-0");
+      toast.classList.add("translate-y-0", "opacity-100");
+
+      setTimeout(() => {
+        toast.classList.remove("translate-y-0", "opacity-100");
+        toast.classList.add("translate-y-20", "opacity-0");
+      }, 3000);
+    }
+
+    // Filters & Search Logic
+    categoryBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        categoryBtns.forEach(b => {
+          b.classList.remove("bg-mimo-terracotta", "text-white", "shadow-sm");
+          b.classList.add("bg-white", "text-mimo-brown", "hover:bg-mimo-creamDark", "border", "border-mimo-creamDark");
+        });
+
+        btn.classList.remove("bg-white", "text-mimo-brown", "hover:bg-mimo-creamDark", "border", "border-mimo-creamDark");
+        btn.classList.add("bg-mimo-terracotta", "text-white", "shadow-sm");
+
+        currentCategory = btn.dataset.category;
+        renderProducts();
+      });
+    });
+
+    searchInput.addEventListener("input", (e) => {
+      searchQuery = e.target.value.trim();
+      clearSearchBtn.classList.toggle("hidden", searchQuery.length === 0);
+      renderProducts();
+    });
+
+    clearSearchBtn.addEventListener("click", () => {
+      searchInput.value = "";
+      searchQuery = "";
+      clearSearchBtn.classList.add("hidden");
+      renderProducts();
+    });
+
+    resetSearchBtn.addEventListener("click", () => {
+      searchInput.value = "";
+      searchQuery = "";
+      currentCategory = "todos";
+      clearSearchBtn.classList.add("hidden");
+      
+      categoryBtns.forEach((b, index) => {
+        if (index === 0) {
+          b.classList.add("bg-mimo-terracotta", "text-white", "shadow-sm");
+          b.classList.remove("bg-white", "text-mimo-brown");
+        } else {
+          b.classList.remove("bg-mimo-terracotta", "text-white");
+          b.classList.add("bg-white", "text-mimo-brown");
+        }
+      });
+
+      renderProducts();
+    });
+
+    window.onload = function() {
+      lucide.createIcons();
+      renderProducts();
+    };
+  </script>
+</body>
+</html>
